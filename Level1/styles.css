@@ -1,0 +1,154 @@
+
+
+* {
+    box-sizing: border-box;
+    font-family: Righteous;
+  }
+  .bg {
+    background-color: #000;
+  }
+  
+  /* Estilização da Navbar */
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #161616;
+    color: #fff;
+    border-bottom: 1px solid rgb(148, 148, 148);
+  }
+  .navbar-logo {
+    font-size: 1.5rem;
+    margin-left: 0.7rem;
+  }
+  .navbar-links ul {
+    margin: 0;
+    padding: 0;
+    display: flex;
+  }
+  .navbar-links li {
+    list-style: none;
+  }
+  .navbar-links li a {
+    letter-spacing: 0.5px;
+    text-decoration: none;
+    color: #fff;
+    padding: 1rem;
+    display: block;
+  }
+  .navbar-links li a:hover {
+    color: #1cda2b;
+  }
+  .navbar-links ul li .locked {
+    opacity: 0.5;
+    pointer-events: none;
+    cursor: default;
+  }
+  
+  .toggle-btn {
+    position: absolute;
+    top: 0.75rem;
+    right: 1rem;
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 21px;
+  }
+  .toggle-btn .bar {
+    height: 3px;
+    width: 100%;
+    background-color: #fff;
+    border-radius: 10px;
+  }
+  
+  /* Aplicando estilizanção após toggle*/
+  @media (max-width: 700px) {
+    .toggle-btn {
+      display: flex;
+    }
+  
+    .navbar-links {
+      display: none;
+      width: 100%;
+    }
+    .navbar {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+    .navbar-links ul {
+      width: 100%;
+      flex-direction: column;
+    }
+    .navbar-links li {
+      text-align: center;
+    }
+    .navbar-links li a {
+      padding: 0.5rem 1rem;
+    }
+    .navbar-links.active {
+      display: flex;
+    }
+  }
+  
+  /* Estilização do jogo */
+  .container {
+    padding-left: 15%;
+    margin: 0 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+  .main-logo {
+    font-size: 4em;
+    color: #fff;
+    width: 100%;
+    text-align: center;
+    text-shadow: 5px 5px 2px #000;
+  }
+  .container a {
+    display: inline-block;
+    position: relative;
+    width: 30%;
+    margin: 1rem;
+    background: transparent;
+    height: 50px;
+    color: #fff;
+    text-decoration: none;
+    transition: 0.5s;
+  }
+  .container a:hover {
+    border: 3px solid #1cda2b;
+  }
+  
+  @font-face {
+    font-family: Righteous;
+    src: url(fonts/Righteous-Regular.ttf);
+  }
+
+  span{
+    animation: blinker 1s linear infinite;
+  }
+
+  @keyframes blinker{
+    50%{
+      opacity: 0;
+    }
+  }
+
+  #demo{
+    color: green;
+    padding: 5%;
+    text-indent: 50px;
+    text-align: justify;
+    text-decoration: none;
+    
+  }
+  
+  #div_button{
+    width: 5000px;
+    margin: 0 auto;
+
+  }
